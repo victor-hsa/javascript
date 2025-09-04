@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual País?</title>
+</head>
+<body>
+    <h1>De qual estado você é?</h1>
+    Você nasceu em qual estado? <input type="text" name="est" id="est">
+    <input type="button" value="Verificar" onclick="estado()">
+    <div id="res">
+
+    </div> 
+    <script>
+        function estado(){
+            var nac = document.getElementById('est')
+            var txtres = document.getElementById('res')
+
+            if (res == 'Rio de Janeiro') {
+            res.innerHTML = '<p>Você é Carioca</p>'
+            
+            }
+        }
+    </script>
+</body>
+</html>

@@ -36,19 +36,28 @@
 <body>
     <header>
         <h1>Verificador de Idade</h1>
+    </header>
         <section>
             <div>
-                Ano de Nascimento: 
-                <input type="number" name="anonas" id="anonas"> <br>
-                Sexo: 
-                <input type="radio" name="M" id="M"> Masculino
-                <input type="radio" name="F" id="F"> Feminino
+                <p>
+                    Ano de Nascimento:
+                    <input type="number" name="anonas" id="anonas" min="0">
+                </p>
+                <p>
+                    Sexo:
+                    <input type="radio" name="mas" id="masc" checked> 
+                    <label for="masc">Masculino</label>
+                    <input type="radio" name="femi" id="fem"> 
+                    <label for="fem">Feminino</label>
+                </p>
+                <p><input type="submit" value="Enviar"></p>
                 <br>
-                <input type="submit" value="Enviar">
-                <br>Preencha os dados a cima para ver o resultado!
+            </div>
+            <div id="res">
+                Preencha os dados a cima para ver o resultado!
             </div>
         </section>
-    </header>
+    
     <footer>
         <p>&copy; CursoemVideo</p>
     </footer>

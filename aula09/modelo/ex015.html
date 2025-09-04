@@ -18,12 +18,10 @@
         section{
             
             background-color: white;
-            width: 500px;
-            
+            width: 300px;
             margin: auto;
             border-radius: 5px;
-            padding: 10px 0px 10px 15px;
-            line-height: 40px;
+            padding: 5px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
         }
 
@@ -31,21 +29,21 @@
             text-align: center;
             color: white;
         }
+
+        div{
+            text-align: center;
+        }
     </style>
 </head>
-<body>
+<body onload="carregar()">
     <header>
-        <h1>Verificador de Idade</h1>
+        <h1>Horário do dia</h1>
         <section>
-            <div>
-                Ano de Nascimento: 
-                <input type="number" name="anonas" id="anonas"> <br>
-                Sexo: 
-                <input type="radio" name="M" id="M"> Masculino
-                <input type="radio" name="F" id="F"> Feminino
-                <br>
-                <input type="submit" value="Enviar">
-                <br>Preencha os dados a cima para ver o resultado!
+            <div id="msg">
+                O horário vai aparecer aqui
+            </div>
+            <div id="foto">
+                <img id="imagem" src="manha.png" alt="foto do dia" height="200px">
             </div>
         </section>
     </header>

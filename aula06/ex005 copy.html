@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabalhando com DOM</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        input{
+            width: 100px; 
+        }
+
+        div#res{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Numeros</h1>
+    <input type="number" name="" id="tn1"> + 
+    <input type="number" name="" id="tn2">
+    <input type="button" value="SOMAR"> <!-- usando o onclick para ligar o botão somar a function do script-->
+    <div id="res">Aqui vai aparecer o resultado da soma</div>
+
+    <script>
+        var c = document.getElementsByTagName('input')[2]
+        c.addEventListener('click', total)//Uso o Click substituindo o ONCLICK e ligo a ação do function, que é TOTAL nesse exercício
+
+        function total(){
+            var n1 = document.getElementById('tn1')//Criando a Variável para pegar o valor do primeiro input do html
+            var n2 = document.getElementById('tn2')
+            var txn1 = Number(n1.value)//transformando o string do primeiro input em um number
+            var txn2 = Number(n2.value)
+            var soma = txn1 + txn2 // variável para somar os dois numeros
+            var r = document.getElementById('res')//variável para mostrar o resultado da soma
+                        
+            r.innerText = `O resultado da soma entre os numeros ${txn1} e ${txn2} é ${soma}` //mostrando o resultado da soma
+        }
+
+    </script>
+</body>
+</html>

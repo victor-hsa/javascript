@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercício</title>
+    <style>
+        body{
+            background-color: rgb(106, 106, 255);
+        }
+
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        input {
+            width: 100px;
+        }
+        section{
+            
+            background-color: white;
+            max-width: 350px;
+            height: auto;
+            margin: auto;
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer{
+            text-align: center;
+            color: white;
+        }
+
+        div{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos Contar</h1>
+        <section>
+            <div>
+                <p>Início da contagem: <input type="number" name="inicio" id="inicio"> </p>
+                <p>Término da contagem: <input type="number" name="fim" id="fim"></p>
+                <p>Forma de contagem: <input type="number" name="passo" id="contagem"></p>
+                <input type="button" value="CONTAR" id="botao">
+            </div>
+            <div id="res">
+                O resultado é...
+            </div>
+        </section>
+    </header>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script>
+        var env = document.getElementsByTagName('input')[3]
+        env.addEventListener('click',conta)
+
+        function conta(){
+            var i = document.getElementById('inicio')
+            var f = document.getElementById('fim')
+            var cont = document.getElementById('contagem')
+            var r = document.getElementById('res')
+
+            
+
+            if (i.value.length == 0 || f.value.length == 0 || cont.value.length == 0){ 
+                window.alert('Valor inválido')
+                            
+            }
+            else { 
+                r.innerHTML = 'Contando: '
+                var ini = Number(i.value)
+                var fim = Number(f.value)
+                var con = Number(cont.value)
+
+            if (con <= 0){
+                r.innerHTML = "Impossível contar. Iniciando do passo 1. "
+                con = 1
+            }
+                if (ini < fim){ //contagem progressiva
+                    for(var c = ini; c <= fim; c += con){ 
+                        r.innerHTML += `${c} `
+                 } 
+                    } else { //contagem regressiva
+                    for(var c = ini; c >= fim; c -= con){ 
+                        r.innerHTML += `${c} `
+                    }
+                 }
+            }
+        } 
+    </script>
+</body>
+</html>

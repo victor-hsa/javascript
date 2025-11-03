@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha de Tabuada</title>
+    <style>
+        body{
+            background-color: rgb(106, 106, 255);
+        }
+
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        section{
+            
+            background-color: white;
+            max-width: 400px;
+            height: auto;
+            margin: auto;
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer{
+            text-align: center;
+            color: white;
+        }
+      
+        select{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Escolha um numero para calcular a tabuada</h1>
+        <section>
+            <div>
+                <p>Adicione um numero: <input type="number" name="numero" id="numero"> <input type="button" value="ENVIAR"></p>
+            </div>
+            <div id="tela">
+                <select name="tabuada" id="seltab"></select>        
+            </div>
+            <div id="res"></div>
+        </section>
+    </header>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

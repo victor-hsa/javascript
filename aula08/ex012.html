@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Voto obrigatório</title>
+</head>
+<body>
+    <h1>Faça seu teste de voto aqui...</h1>
+    <p>Insira sua idade: <input type="number" name="idade" id="idade"></p>
+    <input type="button" value="ENVIAR">
+    <div id="res"><p>A sua idade é de...</p> </div>
+
+    <script>
+        var env = document.getElementsByTagName('input')[1] 
+        env.addEventListener('click', clicar) //Cria uma Variável para receber e enviar a função 'clicar'        
+
+        function clicar(){
+            var idade = document.getElementById('idade')//Cria uma variável para receber o valor da idade
+            var i = Number(idade.value) //Transforma o valor da idade de string para number
+            var res = document.getElementById('res') //cria uma variável para mostrar o resultado
+
+            if (i < 16) { //pega a variável da idade e compara com o valor citado para executar os blocos
+                res.innerHTML = `<p>Você tem ${i} anos. <strong>Você não pode votar</strong></p>`
+            } else if (i < 18 || i >= 65){
+                res.innerHTML = `<p>Você tem ${i} anos. Seu voto é <strong>opcional</strong></p>`
+            } else {
+                res.innerHTML = `<p>Você tem ${i} anos. Seu voto é <strong>obrigatório</strong></p>`
+            }   
+        }
+    </script>
+</body>
+</html>

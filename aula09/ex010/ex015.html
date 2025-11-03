@@ -8,22 +8,24 @@
         body{
             background-color: rgb(106, 106, 255);
         }
-
-        h1{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        div{
+            font-family: 'Times New Roman', Times, serif;
+            color: black;           
+        }
+        header{
             color: white;
             text-align: center;
+            text-shadow: 3px 3px 3px rgb(60, 60, 148);
         }
 
-        section{
-            
+        section{            
             background-color: white;
-            width: 500px;
+            width: 400px;
             
             margin: auto;
             border-radius: 5px;
-            padding: 10px 0px 10px 15px;
-            line-height: 40px;
+            padding: 8px;
+            line-height: 20px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
         }
 
@@ -41,17 +43,19 @@
             <div>
                 <p>
                     Ano de Nascimento:
-                    <input type="number" name="anonas" id="anonas" min="0">
+                    <input type="number" name="anonas" id="anonas" min="1925" max="2025">
                 </p>
+            <div>
                 <p>
                     Sexo:
-                    <input type="radio" name="mas" id="masc" checked> 
+                    <input type="radio" name="sex" id="masc" checked>
                     <label for="masc">Masculino</label>
-                    <input type="radio" name="femi" id="fem"> 
+                    <input type="radio" name="sex" id="fem">
                     <label for="fem">Feminino</label>
                 </p>
-                <p><input type="submit" value="Enviar"></p>
-                <br>
+                <p>
+                    <input type="submit" value="Enviar" onclick="enviar()">
+                </p>
             </div>
             <div id="res">
                 Preencha os dados a cima para ver o resultado!

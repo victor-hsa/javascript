@@ -8,25 +8,24 @@
 <body>
     <h1>Em qual país você mora?</h1>
     <input type="text" name="pais" id="pais">
-    <input type="button" value="ENVIAR">
-    <div id="res"></div>
+    <input type="button" value="ENVIAR" id="env">
+    <div id="res"><p>Você mora em...</p></div>
 
     <script>        
-        var env = document.getElementsByTagName('input')[1]
-        env.addEventListener('click', lugar)
-
-        var pais = document.getElementById('pais')
-        var res = document.getElementById('res')
-        res.style.fontSize = '20px'
+        var p = window.document.getElementById('env')
+        p.addEventListener('click', clicar)
         
-        function lugar(){            
-            
-            if (pais == 'Brasil') {
-                res.innerText = `Você é do Brasil`
-            } else {
-                res.innerText = `Você é Estrangeiro!`
-            }
+        var res = window.document.getElementById('res')
+
+        function clicar(){
+            var mora = window.document.getElementById('pais')
+
+            if (mora.value == 'Brasil') {
+            res.innerHTML = `<p>Você mora em ${mora.value}, então você é Brasileiro</p>`
+        }   else {
+            res.innerHTML = `<p>Você mora em ${mora.value}, então você é estrangeiro</p>`
         }
+    }
     </script>
 </body>
 </html>

@@ -23,9 +23,11 @@
             var vel = Number(tvel.value)
 
             tres.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}km/h</strong></p>`
+            tres.style.color = 'blue'
             
             if (vel > 60) {
-                tres.innerHTML += `<p>Você está acima do limite de velocidade permitido! <strong>MULTADO!</p>`//Não esquecer do += para concatenar a mensagem, caso contrário, a primeira mensagem sera substituida por essa
+                tres.innerHTML += `<p>Você está acima do limite de velocidade permitido! <strong>MULTADO!</strong></p>`//Não esquecer do += para concatenar a mensagem, caso contrário, a primeira mensagem sera substituida por essa
+                tres.style.color = 'red'
             }
             tres.innerHTML += `<p>Dirija sempre com responsabilidade! <strong>Use o cinto de segurança</strong>`//+= serve para concatenar as frases
         }
